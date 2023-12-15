@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Top Bar for Subject Selection and Class Name -->
+    <LinearLayout
+        android:id="@+id/topBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:background="@color/colorPrimary">
+
+        <!-- Display Student's Class Name -->
+        <TextView
+            android:id="@+id/classNameTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="9dp"
+            android:text="Class: X"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold" />
+
+        <!-- Subject Selection -->
+        <Spinner
+            android:id="@+id/subjectSpinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:drawable/btn_dropdown" />
+
+        <!-- Other Views for Subject Selection can be added here -->
+
+    </LinearLayout>
+
+    <!-- List of Students with Checkboxes -->
+    <ListView
+        android:id="@+id/studentListView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/topBarLayout"
+        android:padding="16dp" />
+
+    <!-- Display Count of Checked Checkboxes -->
+    <TextView
+        android:id="@+id/countTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/studentListView"
+        android:layout_centerHorizontal="true"
+        android:paddingTop="16dp"
+        android:textColor="#000000"
+        android:text="Checked: 0" />
+
+</RelativeLayout>
